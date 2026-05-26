@@ -404,7 +404,7 @@ thead .compare__col--trad { color: rgba(255,255,255,.4) !important; }
 /* ---- RESPONSIVE ---- */
 @media (max-width: 768px) {
   .nav { padding: 20px 24px; }
-  .hero__content { padding: 140px 24px 80px; }
+  .hero__content { padding: 100px 24px 80px; }
   .hero__scroll-hint { left: 24px; }
   .section { padding: 72px 0; }
   .solution__grid { grid-template-columns: 1fr; gap: 3rem; }
