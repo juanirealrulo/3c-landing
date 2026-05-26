@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="style.css" />
   <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
 </head>
 <body>
@@ -26,10 +26,10 @@
         <em>en Córdoba.</em>
       </h1>
       <p class="hero__sub">
-        Diseño moderno, confort real, proceso claro.
+        Diseño moderno, eficiencia real, proceso claro.
       </p>
       <div class="hero__badges">
-        <div class="hero__badge"><span class="hero__badge-dot"></span>Construcción sustentable</div>
+        <div class="hero__badge"><span class="hero__badge-dot"></span>Tecnología constructiva innovadora</div>
         <div class="hero__badge"><span class="hero__badge-dot"></span>Confort térmico superior</div>
         <div class="hero__badge"><span class="hero__badge-dot"></span>Llave en mano</div>
       </div>
@@ -92,16 +92,16 @@
     </div>
   </section>
  
-  <!-- SOLUCIÓN -->
+<!-- SOLUCIÓN -->
   <section class="section section--dark solution">
     <div class="container">
       <p class="section__eyebrow section__eyebrow--light">Lo que hacemos diferente</p>
       <h2 class="section__title section__title--light">Un sistema constructivo<br /><em>diseñado para rendir.</em></h2>
       <div class="solution__grid">
         <div class="solution__visual">
-          <div class="placeholder-img placeholder-img--tall">
-            <span>Foto real de obra 3C</span>
-          </div>
+          <video autoplay loop muted playsinline class="solution__visual-img">
+            <source src="images/obra-3c.mp4" type="video/mp4">
+          </video>
         </div>
         <div class="solution__points">
           <div class="solution__point">
@@ -183,23 +183,29 @@
     </div>
   </section>
  
-  <!-- OBRAS -->
+ <!-- OBRAS -->
   <section class="section section--white works">
     <div class="container">
       <p class="section__eyebrow">Obras reales</p>
       <h2 class="section__title">No son renders.<br /><em>Son casas que ya existen.</em></h2>
       <div class="works__grid">
         <div class="work-item">
-          <div class="placeholder-img"><span>Foto obra 1 — exterior</span></div>
-          <p class="work-item__caption">Casa familia González · Córdoba Capital · 72 m²</p>
+          <div class="placeholder-img">
+            <img src="images/exterior.jpg" alt="Casa en La Deseada, Córdoba" style="width:100%; height:100%; object-fit:cover; border-radius:var(--r-md);" />
+          </div>
+          <p class="work-item__caption">Casa en country · La Calera, Córdoba · 190 m² · 2.470 kg de plástico recuperado</p>
         </div>
         <div class="work-item">
-          <div class="placeholder-img"><span>Foto obra 2 — interior</span></div>
-          <p class="work-item__caption">Vivienda familiar · Río Ceballos · 58 m²</p>
+          <div class="placeholder-img">
+            <img src="images/interior.jpg" alt="Casa en Acquavista, Córdoba" style="width:100%; height:100%; object-fit:cover; border-radius:var(--r-md);" />
+          </div>
+          <p class="work-item__caption">Barrio Acquavista · Córdoba · 240 m² · 3.120 kg de plástico recuperado</p>
         </div>
         <div class="work-item">
-          <div class="placeholder-img"><span>Foto obra 3 — detalle constructivo</span></div>
-          <p class="work-item__caption">Oficinas BioCórdoba · 40 m² · 600 kg plástico recuperado</p>
+          <div class="placeholder-img">
+            <img src="images/detallesconstructivos.jpg" alt="Oficinas BioCórdoba" style="width:100%; height:100%; object-fit:cover; border-radius:var(--r-md);" />
+          </div>
+          <p class="work-item__caption">Oficinas BioCórdoba · 40 m² · 600 kg de plástico recuperado</p>
         </div>
       </div>
     </div>
@@ -229,10 +235,10 @@
     <div class="container container--narrow">
       <p class="section__eyebrow">Lo que dicen quienes construyeron</p>
       <blockquote class="testimonial__quote">
-        "Lo que más me sorprendió fue la diferencia de temperatura. En invierno la casa mantiene el calor sola. La factura de gas bajó muchísimo desde que nos mudamos."
+        "La aislación es real. Pasamos el invierno sin necesitar mucha calefacción. Y pudimos construir exactamente lo que queríamos, nada nos limitó."
       </blockquote>
-      <p class="testimonial__author">— [Nombre cliente] · Casa construida en [barrio], Córdoba</p>
-      <p class="testimonial__note">[Placeholder — reemplazar con testimonio real]</p>
+      <p class="testimonial__author">— Mechi Montserrat · Casa de 175 m² · Anisacate, Córdoba</p>
+      <p class="testimonial__note">Testimonio completo en instagram.</p>
     </div>
   </section>
  
@@ -351,8 +357,8 @@
           <p>Tecnología constructiva sustentable.<br />Córdoba, Argentina.</p>
         </div>
         <div class="footer__links">
-          <a href="mailto:[EMAIL_PLACEHOLDER]">[email@3cconstrucciones.com]</a>
-          <a href="https://wa.me/54[NUMERO]" target="_blank">WhatsApp</a>
+          <a href="mailto:[EMAIL_PLACEHOLDER]">3cconstrucciones.comercial@gmail.com</a>
+          <a href="https://wa.me/543516871791" target="_blank">WhatsApp</a>
           <a href="https://instagram.com/3.c.construcciones" target="_blank">Instagram</a>
         </div>
       </div>
