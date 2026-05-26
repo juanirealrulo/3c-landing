@@ -245,6 +245,14 @@ body {
 }
 .solution__point h3 { font-size: 1rem; font-weight: 700; color: var(--white); margin-bottom: .4rem; }
 .solution__point p  { font-size: 14px; line-height: 1.7; color: var(--text-on-dark-sub); }
+
+.solution__visual video {
+  width: 100%;
+  aspect-ratio: 4.5/5;
+  object-fit: cover;
+  border-radius: var(--r-md);
+  display: block;
+}
  
 .highlight-box {
   background: var(--yellow);
