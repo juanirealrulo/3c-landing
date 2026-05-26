@@ -3,7 +3,7 @@
 //  Número a reemplazar: 54XXXXXXXXXX
 // =============================================
 
-const WHATSAPP_NUMBER = '54XXXXXXXXXX'; // ← Reemplazar con el número real (sin +, sin espacios)
+const WHATSAPP_NUMBER = '543516871791'; // ← Reemplazar con el número real (sin +, sin espacios)
 
 document.getElementById('contactForm').addEventListener('submit', function (e) {
   e.preventDefault();
