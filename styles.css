@@ -157,8 +157,8 @@ body {
 .hero__tag {
   display: inline-block;
   font-size: 11px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase;
-  color: var(--white);
-  background: rgba(177,207,230,.1); border: 1px solid rgba(255,255,255,.25);
+  color: var(--yellow);
+  background: rgba(255,235,59,.15); border: 1px solid rgba(255,235,59,.4);
   padding: 6px 14px; border-radius: 100px; margin-bottom: 2rem;
 }
 .hero__title {
@@ -168,10 +168,10 @@ body {
   letter-spacing: -.03em;
 }
 .hero__title em { font-style: italic; font-weight: 400; color: var(--blue-soft); }
- 
+
 .hero__sub {
   font-size: 18px; line-height: 1.65;
-  color: var(--text-on-dark-sub);
+  color: var(--white);
   margin-bottom: 2.5rem; max-width: 540px;
 }
 .hero__badges {
@@ -179,9 +179,9 @@ body {
 }
 .hero__badge {
   display: flex; align-items: center; gap: 8px;
-  background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.14);
+  background: rgba(255,255,255,.15); border: 1px solid rgba(255,255,255,.35);
   border-radius: 100px; padding: 8px 16px;
-  font-size: 13px; font-weight: 500; color: rgba(255,255,255,.8);
+  font-size: 13px; font-weight: 500; color: var(--white);
 }
 .hero__badge-dot {
   width: 7px; height: 7px; border-radius: 50%;
