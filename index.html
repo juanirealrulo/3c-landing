@@ -23,6 +23,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>3C Construcciones | Construí tu casa en Córdoba</title>
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet" />
@@ -392,5 +393,23 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
  
   <script src="script.js"></script>
   <script>lucide.createIcons();</script>
+  <script>
+    const originalTitle = document.title;
+    const messages = ['¡Volvé...', '¡No te lo pierdas!'];
+    let msgIndex = 0;
+    let interval;
+    document.addEventListener('visibilitychange', function () {
+      if (document.hidden) {
+        interval = setInterval(function () {
+          document.title = messages[msgIndex % messages.length];
+          msgIndex++;
+        }, 1500);
+      } else {
+        clearInterval(interval);
+        msgIndex = 0;
+        document.title = originalTitle;
+      }
+    });
+  </script>
 </body>
 </html>
