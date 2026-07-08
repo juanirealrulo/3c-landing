@@ -1,31 +1,34 @@
 // =============================================
 //  3C CONSTRUCCIONES — Formulario
-//  Envía lead a Airtable (webhook) + abre WhatsApp
+//  Envía lead a Airtable (vía Netlify Function) + abre WhatsApp
 // =============================================
 
 const WHATSAPP_NUMBER = '543516871791'; // Número real (sin +, sin espacios)
-const WEBHOOK_URL = 'https://hooks.airtable.com/workflows/v1/genericWebhook/appMgH9BjJRnZwegL/wflXveQhPF4VLqOSr/wtrKna5tY7Ihe4Gjj';
 
-// --- Envío a Airtable (no bloquea el flujo) ---
-function crearLeadEnAirtable(datos) {
+// Apunta a la Netlify Function de nuestro propio dominio (sin CORS).
+// La función se encarga de reenviar el lead a Airtable del lado del servidor.
+const LEAD_ENDPOINT = '/.netlify/functions/enviar-lead';
+
+// --- Envío del lead (no bloquea el flujo) ---
+function crearLead(datos) {
   const payload = {
     nombre: datos.nombre,
     telefono: datos.telefono,
     zona: datos.zona,
     metros: datos.metros,
-    tipoProyecto: datos.tipoProyecto,                       // "Casa nueva" | "Ampliación" | "Reforma"
-    tieneProyectoArquitectonico: datos.tieneProyecto,       // true / false
-    tieneTerrenoPropio: datos.tieneTerreno,                 // true / false
-    tieneFinanciamientoEnCurso: datos.tieneFinanciamiento,  // true / false
+    tipoProyecto: datos.tipoProyecto,                            // "Casa nueva" | "Ampliación" | "Reforma"
+    tieneProyectoArquitectonico: datos.tieneProyecto,            // true / false
+    tieneTerrenoPropio: datos.tieneTerreno,                      // true / false
+    tieneFinanciamientoEnCurso: datos.tieneFinanciamiento,       // true / false
     notas: datos.notas || ''
   };
 
-  fetch(WEBHOOK_URL, {
+  fetch(LEAD_ENDPOINT, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(payload)
   }).catch(function (error) {
-    console.error('Error enviando lead a Airtable:', error);
+    console.error('Error enviando lead:', error);
     // El flujo de WhatsApp sigue igual aunque esto falle
   });
 }
@@ -55,8 +58,8 @@ document.getElementById('contactForm').addEventListener('submit', function (e) {
     return;
   }
 
-  // PASO 1 — Enviar lead a Airtable (dispara y sigue, no espera respuesta)
-  crearLeadEnAirtable(datos);
+  // PASO 1 — Enviar lead (dispara y sigue, no espera respuesta)
+  crearLead(datos);
 
   // PASO 2 — Armar mensaje de WhatsApp
   let mensaje = `Hola, soy *${datos.nombre}*.\n\n`;
