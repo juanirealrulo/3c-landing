@@ -9,7 +9,7 @@
 //  donde las reglas de CORS del navegador no aplican.
 // =============================================
 
-const WEBHOOK_URL = 'https://hooks.airtable.com/workflows/v1/genericWebhook/appMgH9BjJRnZwegL/wflXveQhPF4VLqOSr/wtrKna5tY7Ihe4Gjj';
+const WEBHOOK_URL = 'https://hooks.airtable.com/workflows/v1/genericWebhook/appt6NNClnuOZujF0/wflXveQhPF4VLqOSr/wtrKna5tY7Ihe4Gjj';
 
 exports.handler = async function (event) {
   // Solo aceptamos POST
