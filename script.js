@@ -14,9 +14,11 @@ function crearLead(datos) {
   const payload = {
     nombre: datos.nombre,
     telefono: datos.telefono,
+    email: datos.email,
     zona: datos.zona,
     metros: datos.metros,
     tipoProyecto: datos.tipoProyecto,                            // "Casa nueva" | "Ampliación" | "Reforma"
+    plazo: datos.plazo || undefined,                             // "Lo antes posible" | "En los próximos 3 meses" | "En los próximos 6 meses" | "Todavía estoy evaluando"
     tieneProyectoArquitectonico: datos.tieneProyecto,            // true / false
     tieneTerrenoPropio: datos.tieneTerreno,                      // true / false
     tieneFinanciamientoEnCurso: datos.tieneFinanciamiento,       // true / false
@@ -53,8 +55,8 @@ document.getElementById('contactForm').addEventListener('submit', function (e) {
   };
 
   // Validación mínima
-  if (!datos.nombre || !datos.telefono || !datos.email) {
-    alert('Por favor completá tu nombre, teléfono y email antes de continuar.');
+  if (!datos.nombre || !datos.telefono || !datos.email || !datos.tipoProyecto) {
+    alert('Por favor completá tu nombre, teléfono, email y tipo de proyecto antes de continuar.');
     return;
   }
 
